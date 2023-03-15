@@ -14,8 +14,8 @@ nav{
 /* button */
 
 .btn{
-  padding: 1rem;
-  font-size: x-large;
+  padding: .5rem;
+  font-size: large;
   animation: myAnim 1s ease 0s 1 normal both;
   text-decoration: none;
 }
@@ -42,7 +42,8 @@ main{
 /* contact */
 form{
   margin: 0 auto;
-  width: 40%;
+  border-radius: 15px;
+  width: 30%;
   background-color: rgb(205, 202, 202) ;
   padding: 2rem;
   font-size: 1.2rem;
