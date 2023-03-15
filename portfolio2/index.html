@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maxime Pégourié - Portfolio</title>
+  <!-- cdn bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/c5b2ee8841.js" crossorigin="anonymous"></script>
+  <!-- bientot un style en plus pour mettre des animation sur la fdp (levé de rideau tchek bencode video - competiton dev front) -->
+</head>
+
+<body>
+  <header class="py-2">
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
+
+      <div class="container">
+        <a class="navbar-brand text-uppercase fw-bold" href="#">
+          <span class="bg-primary bg-gradient p-1 rounded-3 text-light">M</span>Pégourié
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#moi">Presentation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#expertise">Expertises</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+
+    <!-- presentation succinte et fdp bnt vers 'expertise' -->
+    <section id="moi" class=" py-5">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-12 col-md-6">
+            <h1 class="fw-bold">Bonjour, je m'appelle <b class="fw-bold">Maxime Pégourié</b> votre futur Développeur Web
+            </h1>
+            <h2 class="fw-light">Bienvenue sur ma page où vous trouverez toutes les infos sur mes projets et comment me
+              contacter!</h2>
+            <a href="#expertise" class="btn btn-primary mt-5">Mon expertise web</a>
+          </div>
+          <div class="col-12 col-md-6">
+            <img src="images/fdp.jpg" alt="Maxime Pégourié" width="100%">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  block -> Expertise -->
+    <section id="expertise" class="my-5 py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-0">Mon expertise</h2>
+        <h3 class="fw-light fs-5">Développement web </h3>
+        <div class="row gy-4 mt-4">
+          <div class="col-12 col-md-7">
+
+            <!-- Progress bar  !!!!!!!!!en travaux encore besoin trouver le moyens de tricher sur le % de prog de la bar!!!!!!     -->
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-html5 fa-2x me-3 text-black-50"></i>
+                    <p class="fw-bold m-0">HTML5</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar w-25" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100"> <!--!!! travaux  !!!-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-css3-alt fa-2x me-3 text-black-50"></i>
+                    <!-- font awsomme utilisé pour les icones -->
+                    <p class="fw-bold m-0">CSS3</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar w-25" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                      aria-valuemax="100"> <!--!!! travaux  !!!-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- premier block  progress bar -->
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center"> <!-- sert d'encadré pour la progress bar -->
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-js fa-2x me-3 text-black-50"></i>
+                    <p class="fw-bold m-0">JS</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar " role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100">
+                      <!-- w-25 de base dans la class avec progress bar supprimé pour que ça corresponde mieux au niveau !!!  travaux  !!!-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-php fa-2x me-3 text-black-50"></i>
+                    <p class="fw-bold m-0">PHP</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar " role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100">
+                      <!-- w-25 de base dans la class avec progress bar supprimé pour que ça corresponde mieux au niveau !!!  travaux  !!!-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-sass fa-2x me-3 text-black-50"></i>
+                    <p class="fw-bold m-0">SASS</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar " role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                      aria-valuemax="100">
+                      <!-- w-25 de base dans la class avec progress bar supprimé pour que ça corresponde mieux au niveau !!!  travaux  !!!-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 offset-md-1 col-md-4">
+            <img src="images/code.jpg" alt="écran montrant du code php" width="100%">
+          </div>
+        </div>
+
+
+        <div class="row gy-4 mt-4">
+          <div class="col-12 col-md-4">
+            <img src="images/code2.jpg" alt="écran montrant des designs" width="100%">
+          </div>
+          <div class="col-12 order-first offset-md-1 col-md-7 order-md-last">
+            <!-- deuxieme block de progress bar  -->
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-file-word fa-2x me-3 text-black-50"></i>
+                    <p class="fw-bold m-0">Word</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar w-100" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class=" fa-solid fa-square-pen fa-2x me-3 text-black-50"></i>
+                    <p class="fw-bold m-0">Pencil</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-file-powerpoint fa-2x me-3 text-black-50"></i>
+                    <p class="fw-bold m-0">Power Point</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar w-100" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-camera-rotate fa-2x me-3 text-black-50"></i>
+                    <p class="fw-bold m-0">Photo<br>shop</p>
+                    <!-- escroquerie car trop de txt sur la meme ligne et pas deriere la progress !!!!! besoin solution !!!! (voir avec david/ soso)-->
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3 p-3 bg-white">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fas fa-video fa-2x me-3 text-black-50"></i>
+                    <p class="fw-bold m-0">VLC</p><!--trop de truc payant sur font awesome le cone vlc est payant tchek pour passer par un svg §? ? est -ce que ca passe avec le reste de la page ? 
+                    -->
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="progress">
+                    <div class="progress-bar w-100" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!--
+Partie porfolio et card + offcanvas c'est classe !
+-->
+    <section id="portfolio" class="py-2">
+      <div class="container">
+        <h2 class="mb-0">Mon portfolio</h2>
+        <h3 class="fw-light fs-5">Projets perso et pro</h3>
+
+        <div class="row mt-4 justify-content-center">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                          <!-- des que je met plusieur card dans le meme row elle se mette en colonne align-item ne fonctionne pas sur le parent ni sur les enfants ( ce qui serait chelou)  pour l'instant je laisse une card mais il va falloir vite trouver un solution pour quand je vais vouloir aliment la page ...-->
+              <img src="images/commingsoon.jpg" class="card-img-top" alt=" panneau avec commng soon ecris dessus ">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Projet1</h5>
+                <p class="card-text fw-light">Coming soon</p>
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#comming">En savoir plus</a>
+                <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="comming"
+                  aria-labelledby="offcanvasBottomLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Projet1</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body small">
+                    <!--tentative de carrousel mais qui s'ecrit carousel n°7589546554-->
+                    <div id="CarouselProjet1" class="carousel slide">
+                      <div class="carousel-inner">
+                        <div class="carousel-item h-100 active" data-bs-interval="4000">
+                          <img src="images/commingsoon.jpg" class="d-block w-100" alt="slide 1 "><!-- porbleme dim img -->
+                          <div class="carousel-caption d-none d-md-block"> 
+                            <h5>Commng soon </h5>
+                            <p class="fw-bolder">Ca va bientot arriver mon gars ! </p>
+                          </div>
+                        </div>
+                        <div class="carousel-item h-100 " data-bs-interval="4000">
+                          <img src="images/code.jpg" class="d-block w-100" alt=" slide 2 ">
+                          <div class="carousel-caption d-none d-md-block"><!-- porbleme dim img  --> 
+                            <h5> Eat code sleep repeat</h5>
+                            <p class="fw-bold ">Ca code dure pour l'instant !</p>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#CarouselProjet1"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Précédent</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#CarouselProjet1"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Suivant</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+    </section>
+    <!-- formulaire de contact -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-0">Un projet de création web ?</h2>
+        <h3 class="fw-light fs-5">Prenons rendez-vous dès que possible</h3>
+
+        <div class="row gy-3 mt-4">
+          <div class="col-12 col-md-5">
+            <img src="images/grab-a-coffee.jpg" alt="Image d'une tasse de café" width="100%">
+          </div>
+          <div class="col-12 offset-md-1 col-md-6">
+            <form action="" class="row gy-4">
+              <div class="col-6">
+                <label for="prenom" class="form-label">Prénom</label>
+                <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Albus">
+              </div>
+              <div class="col-6">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" class="form-control" name="nom" id="nom" placeholder="Dumbledor">
+              </div>
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="A.dumbledor@hibourapide.owl">
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label" >Descriptif du projet</label>
+                <textarea name="message" id="message"  rows="3" class="form-control" placeholder="Decrivez moi succintement votre projet"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="border-top ">
+    <div class="container py-3 bg-light ">
+      <div class="row gy-4 align-items-center">
+        <div class="col-12 col-md-4">
+          <a class="navbar-brand text-dark text-uppercase fw-bold " href="#expertise"><!-- faut il renvoyer vers autre part ? -->
+            <span class="bg-primary bg-gradient p-1 rounded-3 text-light">M</span> Pégourié
+          </a>
+        </div>
+        <div class="col-12 col-md-4 text-md-center">
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#Mlegit">Mentions légales</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 text-md-end">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/login/" class="text-decoration-none text-dark"><i class="fab fa-linkedin fa-2x"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/" class="text-decoration-none text-dark"><i class="fab fa-instagram-square fa-2x"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://twitter.com/" class="text-decoration-none text-dark"><i class="fab fa-twitter-square fa-2x"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" tabindex="-1" id="Mlegit" >
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Mentions légales</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Bienvenue dans les mentions legales <br>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+          </div>
+<!-- ce serait cool de faire un form avec une modal a reflechire-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+  </footer>
+</body>
+
+</html>
