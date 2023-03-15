@@ -13,7 +13,7 @@ function verifierImposition(){
     genreSaisi = document.getElementById('genre-saisi').value;
 
     //condition
-if(genreSaisi =="H" && ageSaisi >= 18){
+if(genreSaisi =="H" && ageSaisi > 20){
     message.innerHTML = '<div class="alert alert-danger" role="alert"> Vous etes imposable !</div>';
 }else if(genreSaisi ==="F" && (ageSaisi >= 18 && ageSaisi <= 35)){
     message.innerHTML = '<div class="alert alert-danger" role="alert"> Vous etes imposable !</div>';
