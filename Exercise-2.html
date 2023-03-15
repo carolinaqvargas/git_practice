@@ -42,7 +42,7 @@
 
 <form onsubmit="return false">
   <label for="valeur-saisie"  class="mb-1 control-label">Combien de photocopies souhaitez-vous realiser?</label>
-  <input type="number" class="form-control" id="valeur-saisie" aria-describedby="valeur-saisie">
+  <input type="number" min="1" class="form-control" id="valeur-saisie" aria-describedby="valeur-saisie" required>
 <div id="valeur-description" class="form-text">Rappel de nos tarifs: 10 centimes les 10 premieres, 9 centimes les 20 suivantes et 8 centimes au dela!</div>
 <br>
 <button type="submit" class="btn btn-primary" id="bouton2">Calculer</button>
