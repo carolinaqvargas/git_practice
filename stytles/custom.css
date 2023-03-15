@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, Gotham, sans-serif;
+  color:#484444;
+   }
+
+nav{
+  background-color:#86BD23;
+}
+#navmenu>ul>li{
+  font-size: 1.5rem;
+  padding-left: 2rem;
+}
+
+/* button */
+
+.btn{
+  padding: 1rem;
+  font-size: x-large;
+  animation: myAnim 1s ease 0s 1 normal both;
+  text-decoration: none;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+    
+/* accueil */
+main{
+  background-color: rgb(180, 97, 180);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* contact */
+form{
+  margin: 0 auto;
+  width: 40%;
+  background-color: rgb(205, 202, 202) ;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
