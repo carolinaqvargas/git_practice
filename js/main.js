@@ -43,7 +43,7 @@ if (nbrePhotocopie <= 10){
 }else{
     prixTotal = (nbrePhotocopie-30) * 0.08 + 2.8;
 }
-   message.innerHTML = `Le prix total est de: ${prixTotal} euros. `;
+   message2.innerHTML = `Le prix total est de: ${prixTotal} euros. `;
 }
    
  //appel de la function
