@@ -11,8 +11,17 @@ nav{
   padding-left: 2rem;
 }
 .exo{
-  width: 40%;
+  width: 80%;
   margin: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+  .exo{
+    width: 50%;
+  }
+  main form{
+    width: 50%;
+  }
 }
 
 /* button */
@@ -46,7 +55,7 @@ main{
 form{
   margin: 0 auto;
   border-radius: 15px;
-  width: 30%;
+  width: 80%;
   background-color: rgb(205, 202, 202) ;
   padding: 2rem;
   font-size: 1.2rem;

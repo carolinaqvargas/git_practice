@@ -1,5 +1,3 @@
-
-
 // Exercice 1
 
 let ageSaisie;
@@ -23,29 +21,32 @@ if(genreSaisie =="H" && ageSaisie > 20){
 
 }
     //appel de la function
-bouton.addEventListener('click',verifierImposition,false)
 
+    if(document.getElementById('bouton'))
+        {
+         bouton.addEventListener('click',verifierImposition,false)
+        }
 
+// Exercice 2 
 
-// // Exercice 2 
+let nbrePhotocopie;
+let prixTotal;
+let bouton2 = document.getElementById('bouton2');
+let message2 = document.getElementById('message2');
 
-// let nbrePhotocopie;
-// let prixTotal;
-// let bouton2 = document.getElementById('bouton2');
-// let message2 = document.getElementById('message2');
+function effectuerCalcul(){
+nbrePhotocopie = document.getElementById('valeur-saisie').value;
+if (nbrePhotocopie <= 10){
+    prixTotal = nbrePhotocopie*0.1;
+}else if (nbrePhotocopie <= 30){
+    prixTotal = (nbrePhotocopie-10) * 0.09 + 1;
+}else{
+    prixTotal = (nbrePhotocopie-30) * 0.08 + 2.8;
+}
 
-// function effectuerCalcul(){
-// nbrePhotocopie = document.getElementById('valeur-saisie').value;
-// if (nbrePhotocopie <= 10){
-//     prixTotal = nbrePhotocopie*0.1;
-// }else if (nbrePhotocopie <= 30){
-//     prixTotal = (nbrePhotocopie-10) * 0.09 + 1;
-// }else{
-//     prixTotal = (nbrePhotocopie-30) * 0.08 + 2.8;
-// }
-//    message2.innerHTML = `Le prix total est de: ${prixTotal} euros. `;
-// }
+   message2.innerHTML = `Le prix total est de: ${prixTotal} euros. `;
+}
    
-//  //appel de la function
-// bouton2.addEventListener('click',effectuerCalcul,false);
+ //appel de la function
+bouton2.addEventListener('click',effectuerCalcul,false);
 
