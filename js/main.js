@@ -34,14 +34,18 @@ let prixTotal;
 let bouton2 = document.getElementById('bouton2');
 let message2 = document.getElementById('message2');
 
+function roundToTwo(num) {
+    return +(Math.round(num + "e+2")  + "e-2");       //round repeating decimal 
+}
+
 function effectuerCalcul(){
 nbrePhotocopie = document.getElementById('valeur-saisie').value;
 if (nbrePhotocopie <= 10){
-    prixTotal = nbrePhotocopie*0.1;
+    prixTotal = roundToTwo(nbrePhotocopie*0.1);
 }else if (nbrePhotocopie <= 30){
-    prixTotal = (nbrePhotocopie-10) * 0.09 + 1;
+    prixTotal = roundToTwo((nbrePhotocopie-10) * 0.09 + 1);
 }else{
-    prixTotal = (nbrePhotocopie-30) * 0.08 + 2.8;
+    prixTotal = roundToTwo((nbrePhotocopie-30) * 0.08 + 2.8);
 }
 
    message2.innerHTML = `Le prix total est de: ${prixTotal} euros. `;
@@ -127,9 +131,9 @@ function calculerHeure(){
             aRendre = aRendre - 5;
         }
 
-        rendre1.innerHTML = `${nbre10euros}`;
+        rendre1.innerHTML = `${aRendre}`;
         rendre5.innerHTML = `${nbre5euros}`;
-        rendre10.innerHTML = `${aRendre}`;
+        rendre10.innerHTML = `${nbre10euros}`;
     }
         //appel de la function
     
@@ -164,28 +168,70 @@ btnEmail.addEventListener('click',validerEmail,false)
     let nbrAccidents;
     let btnAssurance = document.getElementById('btnAssurance');
     let affichageTarif = document.getElementById('affichageTarif');
-    
-    function calculerTarif(){
-        //recuperer la valeur des inputs, la fonction parseInt() converti un string (chaîne de caractère) en int (entier).
-        age = parseInt(document.getElementById('age').value) ;
-        dureePermis = parseInt(document.getElementById('dureePermis').value) ;
-        nbrAccidents = parseInt(document.getElementById('nbrAccidents').value);
-        dureeAssurance = parseInt(document.getElementById('dureeAssurance').value);
+    let pointsMalus;
 
-        //condition
-        if ()
-          
-             affichageTarif.innerHTML = `Tarif Bleu`;
-             affichageTarif.innerHTML = `Tarif Vert`;
-             affichageTarif.innerHTML = `Tarif Orange`;
-             affichageTarif.innerHTML = `Tarif Rouge`;
-             affichageTarif.innerHTML = `Refuse`;
-    }
-        //appel de la function
+function calculerTarif(){
+    nbrAccidents = parseInt(document.getElementById('nbrAccidents').value);
+    age = parseInt(document.getElementById('age').value) ;
+    dureePermis = parseInt(document.getElementById('dureePermis').value) ;
+    dureeAssurance = parseInt(document.getElementById('dureeAssurance').value);
+
+    if (nbrAccidents >=3){
+        affichageTarif.innerHTML = `<div class="alert alert-dark" role="alert">Refuse</div>`;
+    }else{
+        pointsMalus = 0;
+                if (age > 25) {
+                pointsMalus = ++pointsMalus;
+                } 
+                if (dureePermis > 2) {
+                pointsMalus = ++pointsMalus;
+                } 
+                
+                if (dureeAssurance > 1) {
+                pointsMalus = ++pointsMalus;
+                } 
+                if (nbrAccidents === 1){
+                pointsMalus = --pointsMalus;
+                }
+                if (nbrAccidents == 2){
+                pointsMalus = --pointsMalus;
+                }
+                                         
+                             
+            switch (pointsMalus) {
+                case 3:
+                affichageTarif.innerHTML = `<div class="alert alert-primary" role="alert">Tarif Bleu</div>`;
+                break;
     
-        if(document.getElementById('btnAssurance'))
-            {
-                btnAssurance.addEventListener('click',calculerTarif,false)
-            }
+                case 2:
+                affichageTarif.innerHTML = `<div class="alert alert-success" role="alert">Tarif Vert</div>`;
+                break;
+    
+                case 1:
+                affichageTarif.innerHTML = `<div class="alert alert-warning" role="alert">Tarif Orange</div>`;
+                break;
+    
+                case 0:
+                affichageTarif.innerHTML = `<div class="alert alert-danger" role="alert">Tarif Rouge</div>`;
+                break;
+    
+                case -1:
+                affichageTarif.innerHTML = `<div class="alert alert-dark" role="alert">Refuse</div>`;
+                break;
+
+                case -2:
+                affichageTarif.innerHTML = `<div class="alert alert-dark" role="alert">Refuse</div>`;
+                break;
+            } 
+       
+    }
+
+}
+    
+    //appel de la function
+    
+    if(document.getElementById('btnAssurance')){
+    btnAssurance.addEventListener('click',calculerTarif,false)
+    }
     
     
