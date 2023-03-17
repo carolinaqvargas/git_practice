@@ -11,23 +11,22 @@ function verifierImposition(){
     genreSaisie = document.getElementById('genre-saisie').value;
 
     //condition
-if(genreSaisie =="H" && ageSaisie > 20){
-    message.innerHTML = '<div class="alert alert-danger" role="alert"> Vous etes imposable !</div>';
-}else if(genreSaisie ==="F" && (ageSaisie >= 18 && ageSaisie <= 35)){
-    message.innerHTML = '<div class="alert alert-danger" role="alert"> Vous etes imposable !</div>';
-}else{
-    message.innerHTML = '<div class="alert alert-success" role="alert"> Vous etes non imposable !</div>';
-}
-
+    if(genreSaisie =="H" && ageSaisie > 20){
+        message.innerHTML = '<div class="alert alert-danger" role="alert"> Vous etes imposable !</div>';
+    }else if(genreSaisie ==="F" && (ageSaisie >= 18 && ageSaisie <= 35)){
+        message.innerHTML = '<div class="alert alert-danger" role="alert"> Vous etes imposable !</div>';
+    }else{
+        message.innerHTML = '<div class="alert alert-success" role="alert"> Vous etes non imposable !</div>';
+    }
 }
     //appel de la function
 
     if(document.getElementById('bouton'))
-        {
-         bouton.addEventListener('click',verifierImposition,false)
-        }
+    {
+     bouton.addEventListener('click',verifierImposition,false)
+    }
 
-// Exercice 2 
+// Exercice 2 *********************************************************************************************
 
 let nbrePhotocopie;
 let prixTotal;
@@ -57,8 +56,7 @@ if(document.getElementById('bouton2'))
  bouton2.addEventListener('click',effectuerCalcul,false)
 }
 
-
-// Exercice 3
+// Exercice 3 *********************************************************************************************
     //declarer les variables
 let heureSaisie;
 let minuteSaisie;
@@ -95,8 +93,7 @@ function calculerHeure(){
          btnHeure.addEventListener('click',calculerHeure,false)
         }
 
-
-// Exercice 4
+// Exercice 4 *********************************************************************************************
 
     //declarer les variables
     let montApayer;
@@ -134,19 +131,18 @@ function calculerHeure(){
         rendre10.innerHTML = `${nbre10euros}`;
     }
         //appel de la function
-    
         if(document.getElementById('btnMonnaie'))
             {
              btnMonnaie.addEventListener('click',calculerMonnaie,false)
             }
     
-// Exercice 5
+// Exercice 5 *********************************************************************************************
 
 let emailSaisie;
 let emailSaisieCoupe;
 let positionArobase;
 let btnEmail = document.getElementById('btnEmail');
-let messageEmail = document.getElementById('messageEmail');
+let  = document.getElementById('messageEmail');
 
 function validerEmail(){
 emailSaisie = document.getElementById('emailSaisie').value;
@@ -156,24 +152,23 @@ if(emailSaisie.includes('@')&& emailSaisie.includes('.')){
     positionArobase = emailSaisie.indexOf('@');                //on trouve l'index de @ 
     emailSaisieCoupe = emailSaisie.substring(positionArobase);   //on s'assure que le point est bien apres @. 
     if(emailSaisieCoupe.includes('.')){
-        messageEmail.innerHTML = '<span class="alert-success">Adresse email valide!</span>';
+        messageEmail.innerHTML = `<div class="alert alert-success" role="alert">Adresse email valide!</div>`;
     }else{
-        messageEmail.innerHTML = '<span class="alert-danger">Adresse email invalide!</span>';
+        messageEmail.innerHTML = `<div class="alert alert-danger" role="alert">Adresse email invalide!</div>`;
     }
     
 }else {
-        messageEmail.innerHTML = '<span class="alert-danger">Adresse email invalide!</span>';
+        messageEmail.innerHTML = `<div class="alert alert-danger" role="alert">Adresse email invalide!</div>`;
 }
 }
 
 //appel de la function
+if(document.getElementById('emailSaisie'))
+{
+    window.addEventListener('keydown',validerEmail,false)
+}
 
-// document.getElementById('messageEmail').addEventListener('keydown',validerEmail,false)
-
-
-
-
-// Exercice 6
+// Exercice 6 *********************************************************************************************
     //declarer les variables
     let age;
     let dureePermis;
@@ -232,7 +227,6 @@ function calculerTarif(){
 }
     
     //appel de la function
-    
     if(document.getElementById('btnAssurance')){
     btnAssurance.addEventListener('click',calculerTarif,false)
     }
