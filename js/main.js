@@ -73,22 +73,20 @@ function calculerHeure(){
     secondeSaisie = parseInt(document.getElementById('seconde-saisie').value);
 
     //condition
-    if (heureSaisie === 23 && minuteSaisie === 59 && secondeSaisie === 59){
-        heureSaisie === 0;
-        minuteSaisie === 0;
-        secondeSaisie === 0;
-         } else if (minuteSaisie === 59 && secondeSaisie === 59){
-         heureSaisie === heureSaisie++;
-         minuteSaisie === 0;
-         secondeSaisie === 0;
-            } else if (secondeSaisie === 59){
-         minuteSaisie === minuteSaisie++;
-         secondeSaisie === 0;
-          } else {
-         secondeSaisie === secondeSaisie++;
-         };
+    secondeSaisie = secondeSaisie+1;
+    if (secondeSaisie == 60){
+        secondeSaisie = "00";
+        minuteSaisie = minuteSaisie+1;    
+    }
+    if (minuteSaisie == 60){
+        minuteSaisie = "00";
+        heureSaisie = heureSaisie+1;
+    }
+    if (heureSaisie == 24){
+        heureSaisie = "00";
+    };
       
-         affichageHeure.innerHTML = `${heureSaisie}h ${minuteSaisie}min ${secondeSaisie}sec`;
+    affichageHeure.innerHTML = `${heureSaisie}h ${minuteSaisie}min ${secondeSaisie}sec`;
 }
     //appel de la function
 
@@ -145,31 +143,33 @@ function calculerHeure(){
 // Exercice 5
 
 let emailSaisie;
-
+let emailSaisieCoupe;
+let positionArobase;
 let btnEmail = document.getElementById('btnEmail');
 let messageEmail = document.getElementById('messageEmail');
-
-// callback function 
-function checkIfEmailInString(text) { 
-    var re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
-    return re.test(text);
-}
 
 function validerEmail(){
 emailSaisie = document.getElementById('emailSaisie').value;
 
-if(checkIfEmailInString(emailSaisie)){
-    messageEmail.innerHTML = '<div class="alert alert-success" role="alert">Adresse email valide!</div>';
+if(emailSaisie.includes('@')&& emailSaisie.includes('.')){
+
+    positionArobase = emailSaisie.indexOf('@');                //on trouve l'index de @ 
+    emailSaisieCoupe = emailSaisie.substring(positionArobase);   //on s'assure que le point est bien apres @. 
+    if(emailSaisieCoupe.includes('.')){
+        messageEmail.innerHTML = '<span class="alert-success">Adresse email valide!</span>';
+    }else{
+        messageEmail.innerHTML = '<span class="alert-danger">Adresse email invalide!</span>';
+    }
+    
 }else {
-    messageEmail.innerHTML = '<div class="alert alert-danger" role="alert">Adresse email invalide!</div>';
+        messageEmail.innerHTML = '<span class="alert-danger">Adresse email invalide!</span>';
 }
 }
 
 //appel de la function
-if(document.getElementById('btnEmail'))
-{
-btnEmail.addEventListener('click',validerEmail,false)
-}
+
+// document.getElementById('messageEmail').addEventListener('keydown',validerEmail,false)
+
 
 
 
@@ -181,8 +181,9 @@ btnEmail.addEventListener('click',validerEmail,false)
     let nbrAccidents;
     let btnAssurance = document.getElementById('btnAssurance');
     let affichageTarif = document.getElementById('affichageTarif');
-    let pointsMalus;
+    let compteurPrime;
 
+    
 function calculerTarif(){
     nbrAccidents = parseInt(document.getElementById('nbrAccidents').value);
     age = parseInt(document.getElementById('age').value) ;
@@ -192,26 +193,21 @@ function calculerTarif(){
     if (nbrAccidents >=3){
         affichageTarif.innerHTML = `<div class="alert alert-dark" role="alert">Refuse</div>`;
     }else{
-        pointsMalus = 0;
+        compteurPrime = 0;
                 if (age > 25) {
-                pointsMalus = ++pointsMalus;
+                compteurPrime = compteurPrime+1;
                 } 
                 if (dureePermis > 2) {
-                pointsMalus = ++pointsMalus;
+                compteurPrime = compteurPrime+1;
                 } 
                 
                 if (dureeAssurance > 1) {
-                pointsMalus = ++pointsMalus;
+                compteurPrime = compteurPrime+1;
                 } 
-                if (nbrAccidents === 1){
-                pointsMalus = --pointsMalus;
-                }
-                if (nbrAccidents == 2){
-                pointsMalus = --pointsMalus;
-                }
+                compteurPrime = compteurPrime - nbrAccidents;
                                          
                              
-            switch (pointsMalus) {
+            switch (compteurPrime) {
                 case 3:
                 affichageTarif.innerHTML = `<div class="alert alert-primary" role="alert">Tarif Bleu</div>`;
                 break;
@@ -229,16 +225,10 @@ function calculerTarif(){
                 break;
     
                 case -1:
-                affichageTarif.innerHTML = `<div class="alert alert-dark" role="alert">Refuse</div>`;
-                break;
-
-                case -2:
-                affichageTarif.innerHTML = `<div class="alert alert-dark" role="alert">Refuse</div>`;
+                affichageTarif.innerHTML = `<div class="alert alert-dark" role="alert">Refusé</div>`;
                 break;
             } 
-       
     }
-
 }
     
     //appel de la function
