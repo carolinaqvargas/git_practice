@@ -149,16 +149,29 @@ let emailSaisie;
 let btnEmail = document.getElementById('btnEmail');
 let messageEmail = document.getElementById('messageEmail');
 
-function validerEmail(){
-    emailSaisie = document.getElementById('emailSaisie').value;
-    
+// callback function 
+function checkIfEmailInString(text) { 
+    var re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+    return re.test(text);
 }
-   
- //appel de la function
+
+function validerEmail(){
+emailSaisie = document.getElementById('emailSaisie').value;
+
+if(checkIfEmailInString(emailSaisie)){
+    messageEmail.innerHTML = '<div class="alert alert-success" role="alert">Adresse email valide!</div>';
+}else {
+    messageEmail.innerHTML = '<div class="alert alert-danger" role="alert">Adresse email invalide!</div>';
+}
+}
+
+//appel de la function
 if(document.getElementById('btnEmail'))
 {
 btnEmail.addEventListener('click',validerEmail,false)
 }
+
+
 
 // Exercice 6
     //declarer les variables
