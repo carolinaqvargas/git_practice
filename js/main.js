@@ -231,4 +231,73 @@ function calculerTarif(){
     btnAssurance.addEventListener('click',calculerTarif,false)
     }
     
-    
+    // Exercice 7 *********************************************************************************************
+
+let passSaisie;
+let regexMaj = new RegExp("[A-Z]");
+let regexMin = new RegExp("[a-z]");
+let regexChiffre = new RegExp("[0-9]");
+let regexSpecial = new RegExp("\\W");
+let compteuForce;
+let messagePass = document.getElementById('messagePass');
+
+function checkPass(){
+
+compteuForce = 0;
+passSaisie = document.getElementById('passSaisie').value;
+
+if(regexMaj.test(passSaisie) && passSaisie.length >= 8){
+    compteuForce = compteuForce + 1;
+}
+
+if(regexMin.test(passSaisie) && passSaisie.length >= 8){
+    compteuForce = compteuForce + 1;
+}
+
+if(regexChiffre.test(passSaisie) && passSaisie.length >= 8){
+    compteuForce = compteuForce + 1;
+}
+
+if(regexSpecial.test(passSaisie) && passSaisie.length >= 8){
+    compteuForce = compteuForce + 1;
+}
+
+if(passSaisie.length <8){
+    compteuForce = compteuForce - 1;
+}
+
+switch (compteuForce) {
+    case 4:
+    messagePass.innerHTML = `<div class="alert alert-success" role="alert">Très sécurisé</div>`;
+    break;
+
+    case 3:
+    messagePass.innerHTML = `<div class="alert alert-primary" role="alert">Sécurisé</div>`;
+    break;
+
+    case 2:
+    messagePass.innerHTML = `<div class="alert alert-warning" role="alert">Moyen</div>`;
+    break;
+
+    case 1:
+    messagePass.innerHTML = `<div class="alert alert-danger" role="alert">Dangereux</div>`;
+    break;
+
+    case 0:
+    messagePass.innerHTML = `<div class="alert alert-danger" role="alert">Dangereux</div>`;
+    break;
+
+    case -1:
+    messagePass.innerHTML = `<div class="alert alert-danger" role="alert">Dangereux</div>`;
+    break;
+
+    default:
+    messagePass.innerHTML = "";
+} 
+}
+
+//appel de la function
+if(document.getElementById('messagePass'))
+{
+    window.addEventListener('keyup',checkPass,false)
+}
