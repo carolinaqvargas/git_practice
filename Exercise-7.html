@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exercise 2</title>
+    <title>Exercise 7</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="stytles/custom.css">
     <link rel="shortcut icon" href="#">
@@ -31,32 +31,37 @@
       
 <!-- Showcase -->
 <main class="container-fluid home">
-  <h3 class="text-center p-3">Exercise 2</h3>
+  <h3 class="text-center p-3">Exercise 7</h3>
   <div class="exo">
-    <P >Un magasin de reprographie facture :</P>
-<ul>
-  <li>0,10 € les dix premières photocopies.</li>
-  <li>0,09 € les vingt suivantes.</li>
-  <li>Et 0,08 € au-delà.</li>
-</ul>
-<p>Écrivez un programme en JavaScript  qui demande à l'utilisateur le nombre de photocopies qu'il souhaite effectuer et qui affiche par la suite la facture correspondante.</p>
+    <P >Réalisez un programme en JavaScript qui demande à l'utilisateur un mot de passe.</P>
+    <p>Contrôlez la force du mot passe.</p>
+    <p>Créez votre propre algorithme qui déterminera si le mot de passe saisi est sécurisé ou pas.</p>
+    <p>Nous avons quatre cas possibles:</p>
+  <ul>
+    <li>Très sécurisé (chiffre, minuscule, majuscule et caractère spéciaux)</li>
+    <li>Sécurisé (chiffre, lettre, minuscule et majuscule)</li>
+    <li>Moyen (chiffre, lettre et minuscule)</li>
+    <li>Dangereux (longueur inférieur à 8)</li>
+  </ul>
   </div>
 
+<!-- form -->
 <form onsubmit="return false">
-  <label for="valeur-saisie"  class="mb-1 control-label">Combien de photocopies souhaitez-vous realiser?</label>
-  <input type="number" min="1" class="form-control" id="valeur-saisie" aria-describedby="valeur-saisie" required>
-<div id="valeur-description" class="form-text">Rappel de nos tarifs: 10 centimes les 10 premieres, 9 centimes les 20 suivantes et 8 centimes au dela!</div>
-<br>
-<div class="d-flex justify-content-center">
-<button type="submit" class="btn btn-primary" id="bouton2">Calculer</button>
-</div>
-<br>
-  <div class="mt-3" id="message2"></div>
+  <label for="passSaisie"  class="mb-1 control-label">Saisissez un mot de passe pour en connaitre la force:</label>
+  <input type="text" class="form-control" id="passSaisie" aria-describedby="passSaisie" required placeholder="Tapez ici, puis appuyez sur la touche enter.">
+  <br>
+
+<!-- <div class="d-flex justify-content-center">
+<button type="submit" class="btn btn-primary" id="btnEmail">Valider</button>
+</div> -->
+
+  <div class="mt-3 form-text"> <div id="messagePass"></div></div>
+
 </form>
-  
+
 </main>
 
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
