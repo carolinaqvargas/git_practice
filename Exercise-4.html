@@ -11,28 +11,50 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-xl px-5">
-             
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navmenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <div class="collapse navbar-collapse" id="navmenu">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="index.html">Exercise 1</a></li>
-              <li class="nav-item"><a class="nav-link" href="Exercise-2.html">Exercise 2</a></li>
-              <li class="nav-item"><a class="nav-link" href="Exercise-3.html">Exercise 3</a></li>
-              <li class="nav-item"><a class="nav-link" href="Exercise-4.html">Exercise 4</a></li>
-              <li class="nav-item"><a class="nav-link" href="Exercise-5.html">Exercise 5</a></li>
-              <li class="nav-item"><a class="nav-link" href="Exercise-6.html">Exercise 6</a></li>
-              <li class="nav-item"><a class="nav-link" href="Exercise-7.html">Exercise 7</a></li>
-            </ul>
-          </div>
-      </nav>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-2.html">2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-3.html">3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-4.html">4</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-5.html">5</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-6.html">6</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-7.html">7</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-8.html">8</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
       
 <!-- Showcase -->
-<main class="container-fluid home">
-  <h3 class="text-center p-3">Exercise 4</h3>
+<main class="container-fluid">
+   <div class="row p-5 d-flex">
   <div class="exo">
+     <h3>Exercise 4</h3>
     <P >Créer une application qui calcule la monnaie à rendre.</P>
     <p>Saisissez le montant du ticket à payer.</p>
     <p>Saisissez la somme que le client a donné.</p>
@@ -41,13 +63,14 @@
   </div>
 
 <form onsubmit="return false">
+  <div class="w-50 m-auto">
   <label for="montApayer"  class="mb-1 control-label">Saisissez le montant total a payer:</label>
   <input type="number" min="1" class="form-control" id="montApayer" aria-describedby="montApayer" required>
   <br>
   <label for="montPaye"  class="mb-1 control-label">Saisissez le montant donne par le client:</label>
   <input type="number" min="1" class="form-control" id="montPaye" aria-describedby="montPaye" required>
   <br>
- 
+ </div>
   <div class="d-flex justify-content-center">
     <button type="submit" class="btn btn-primary mb-3" id="btnMonnaie">Rendre la monnaie</button>
   </div> 
@@ -55,7 +78,7 @@
 <br>
 
 <!-- cards -->
-<div class="d-flex justify-content-around">
+<div class="d-flex justify-content-around" id="displayMoney">
 
   <div class="card bg-light text-black">
     <img class="card-img" src="img/10.jpg" alt="Card image">
@@ -82,7 +105,7 @@
 <!-- cards -->
 
 </form>
-  
+  </div>
 </main>
 
     <script src="js/main.js"></script>

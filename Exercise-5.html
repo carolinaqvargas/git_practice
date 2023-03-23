@@ -11,28 +11,50 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-xl px-5">
-             
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navmenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <div class="collapse navbar-collapse" id="navmenu">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="index.html">Exercise 1</a></li>
-              <li class="nav-item"><a class="nav-link" href="Exercise-2.html">Exercise 2</a></li>
-              <li class="nav-item"><a class="nav-link" href="Exercise-3.html">Exercise 3</a></li>
-              <li class="nav-item"><a class="nav-link" href="Exercise-4.html">Exercise 4</a></li>
-              <li class="nav-item"><a class="nav-link" href="Exercise-5.html">Exercise 5</a></li>
-              <li class="nav-item"><a class="nav-link" href="Exercise-6.html">Exercise 6</a></li>
-              <li class="nav-item"><a class="nav-link" href="Exercise-7.html">Exercise 7</a></li>
-            </ul>
-          </div>
-      </nav>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-2.html">2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-3.html">3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-4.html">4</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-5.html">5</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-6.html">6</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-7.html">7</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-8.html">8</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
       
 <!-- Showcase -->
-<main class="container-fluid home">
-  <h3 class="text-center p-3">Exercise 5</h3>
-  <div class="exo">
+<main class="container-fluid">
+  <div class="row p-5 d-flex">
+  <div class="exo col-lg">
+    <h3>Exercise 5</h3>
     <P >Écrire un programme en JavaScript qui demande à un utilisateur de saisir une adresse email via un formulaire.</P>
     <p>Exemple : monadresse@mail.com</p>
     <p>Votre programme doit déterminer si l'adresse fournit par l'utilisateur est valide ou non.</p>
@@ -41,8 +63,7 @@
     <p>Trouvez le moyen de vérifier l'email sans bouton pour votre formulaire.</p>
     <p>Attention : N'utilisez pas le type 'email' dans l'input de votre champ de saisi.</p>
   </div>
-
-<!-- form -->
+<div class="col-lg">
 <form onsubmit="return false">
   <label for="emailSaisie"  class="mb-1 control-label">Saisissez une adresse email:</label>
   <input type="text" class="form-control" id="emailSaisie" aria-describedby="emailSaisie" required placeholder="Tapez ici, puis appuyez sur la touche enter.">
@@ -55,7 +76,8 @@
   <div class="mt-3 form-text"> <div id="messageEmail"></div></div>
 
 </form>
-
+</div>
+</div>
 </main>
 
     <script src="js/main.js"></script>

@@ -301,3 +301,6 @@ if(document.getElementById('messagePass'))
 {
     window.addEventListener('keyup',checkPass,false)
 }
+
+//Exercise 8 
+

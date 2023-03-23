@@ -45,26 +45,21 @@ main{
 form{
   margin: 0 auto;
   border-radius: 15px;
-  width: 80%;
+  min-width: 300px;
   background-color: rgb(205, 202, 202) ;
   padding: 2rem;
   font-size: 1.2rem;
 }
-.exo{
-  width: 80%;
-  margin: auto;
+
+#displayMoney .card {
+  width: 30%; 
+  height: 40%;
 }
 
-@media only screen and (min-width: 1000px) {
-  .exo{
-    width: 50%;
-  }
-  main form{
-    width: 50%;
-  }
-}
-.card{
-  width: 30%;
-  height: auto;
+#prizeImg{
+ width: 80%;
+ margin: 2rem auto;
 
 }
+
+
