@@ -298,8 +298,8 @@ if (document.getElementById("messagePass")) {
 
 const cardNomList = ["Ours cristal", "Lego Avatar", "Couteaux suisse"];
 const imageObjet = ["85.jpg", "56.jpg", "40.jpg"];
+let vraiPrix = [85, 56, 40];
 let prixPropose;
-let prixMystere;
 let nbreAleatoire;
 let compteurTentative;
 let cardImage = document.getElementById("cardImage");
@@ -309,39 +309,37 @@ let message8 = document.getElementById("message8");
 let affichageTentative = document.getElementById("nbre-tentative");
 
 nbreAleatoire = Math.floor(Math.random() * Math.floor(3));
-prixMystere = Math.floor(Math.random() * Math.floor(100));
+
+vraiPrixObjet = vraiPrix[nbreAleatoire];
 
 function afficherImage(valeur) {
-  return (
-    `<img src="img/${valeur}">`
-  );
+  return `<img src="img/${valeur}">`;
 }
+
 cardImage.innerHTML = afficherImage(imageObjet[nbreAleatoire]);
 cardNom.innerHTML = cardNomList[nbreAleatoire];
 compteurTentative = 3;
-affichageTentative = `Il vous reste ${compteurTentative} tentatives...`;
 
 function verifierProposition() {
   prixPropose = document.getElementById("prix-propose").value;
   if (compteurTentative == 0) {
     affichageTentative.innerHTML = `Il vous reste ${compteurTentative} tentatives...`;
-    message8.innerHTML = `Vous avez perdu! <br>Le prix etait de ${prixMystere} euros.`;
+    message8.innerHTML = `Vous avez perdu! <br>Le prix etait de ${vraiPrixObjet} euros.`;
     bouton8.disabled = true;
   } else {
-    if (prixPropose > prixMystere) {
+    if (prixPropose > vraiPrixObjet) {
       message8.innerHTML = "c'est moins!";
       compteurTentative--;
       affichageTentative.innerHTML = `Il vous reste ${compteurTentative} tentatives...`;
     }
-    if (prixPropose < prixMystere) {
+    if (prixPropose < vraiPrixObjet) {
       message8.innerHTML = "c'est plus!";
       compteurTentative--;
       affichageTentative.innerHTML = `Il vous reste ${compteurTentative} tentatives...`;
     }
-    if (prixPropose == prixMystere) {
+    if (prixPropose == vraiPrixObjet) {
       message8.innerHTML = "Bravo! Vous avez gagne!";
       compteurTentative--;
-      affichageTentative.innerHTML = `En ${compteurTentative} tentatives...`;
       bouton8.disabled = true;
     }
   }
