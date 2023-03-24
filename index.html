@@ -4,24 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>index</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <link rel="stylesheet" href="stytles/custom.css" />
     <link rel="shortcut icon" href="#" />
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-xl px-5">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navmenu"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -51,6 +41,9 @@
           <li class="nav-item">
             <a class="nav-link" href="Exercise-8.html">8</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-9.html">9</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -58,72 +51,42 @@
     <!-- Showcase -->
     <main class="container-fluid">
       <div class="row p-5 d-flex">
-      <div class="exo col-lg">
-        <h3>Exercise 1</h3>
-        <p>
-          Les habitants de Zorglub paient l'impôt selon les règles suivantes :
-        </p>
-        <ul>
-          <li>Les hommes de plus de 20 ans paient l'impôt.</li>
-          <li>Les femmes paient l'impôt si elles ont entre 18 et 35 ans.</li>
-          <li>Les autres ne paient pas d'impôt.</li>
-        </ul>
-        <p>
-          Le programme demandera donc l'âge et le sexe du Zorglubien, et se
-          prononcera donc ensuite sur le fait que l'habitant est imposable ou
-          non.
-        </p>
+        <div class="exo col-lg">
+          <h3>Exercise 1</h3>
+          <p>Les habitants de Zorglub paient l'impôt selon les règles suivantes :</p>
+          <ul>
+            <li>Les hommes de plus de 20 ans paient l'impôt.</li>
+            <li>Les femmes paient l'impôt si elles ont entre 18 et 35 ans.</li>
+            <li>Les autres ne paient pas d'impôt.</li>
+          </ul>
+          <p>Le programme demandera donc l'âge et le sexe du Zorglubien, et se prononcera donc ensuite sur le fait que l'habitant est imposable ou non.</p>
+        </div>
+        <div class="col-lg">
+          <form class="" onsubmit="return false">
+            <label for="age-saisie" class="mb-1 control-label">Saisissez l'age du Zorglubien:</label>
+            <input type="number" min="1" class="form-control" id="age-saisie" aria-describedby="age-saisie" required />
+            <div id="age-description" class="form-text">Devez vous payer l'impot?</div>
+            <br />
+
+            <label for="genre-saisie" class="form-label mb-1">Saisissez le genre:</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="genre-saisie" required="required">
+              <option value="" selected>--Choisissez genre--</option>
+              <option value="F">Femme</option>
+              <option value="H">Homme</option>
+            </select>
+            <br />
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary pink" id="bouton">Valider</button>
+            </div>
+            <br />
+
+            <div class="mt-3" id="message"></div>
+          </form>
+        </div>
       </div>
-<div class="col-lg">
-      <form  class="" onsubmit="return false">
-        <label for="age-saisie" class="mb-1 control-label"
-          >Saisissez l'age du Zorglubien:</label
-        >
-        <input
-          type="number"
-          min="1"
-          class="form-control"
-          id="age-saisie"
-          aria-describedby="age-saisie"
-          required
-        />
-        <div id="age-description" class="form-text">
-          Devez vous payer l'impot?
-        </div>
-        <br />
-
-        <label for="genre-saisie" class="form-label mb-1"
-          >Saisissez le genre:</label
-        >
-        <select
-          class="form-select form-select-sm"
-          aria-label=".form-select-sm example"
-          id="genre-saisie"
-          required="required"
-        >
-          <option value="" selected>--Choisissez genre--</option>
-          <option value="F">Femme</option>
-          <option value="H">Homme</option>
-        </select>
-        <br />
-        <div class="d-flex justify-content-center">
-          <button type="submit" class="btn btn-primary pink" id="bouton">
-            Valider
-          </button>
-        </div>
-        <br />
-
-        <div class="mt-3" id="message"></div>
-      </form>
-</div>
-    </div>
     </main>
 
     <script src="js/main.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>

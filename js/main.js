@@ -315,7 +315,6 @@ vraiPrixObjet = vraiPrix[nbreAleatoire];
 function afficherImage(valeur) {
   return `<img src="img/${valeur}">`;
 }
-
 cardImage.innerHTML = afficherImage(imageObjet[nbreAleatoire]);
 cardNom.innerHTML = cardNomList[nbreAleatoire];
 compteurTentative = 3;
@@ -328,12 +327,12 @@ function verifierProposition() {
     bouton8.disabled = true;
   } else {
     if (prixPropose > vraiPrixObjet) {
-      message8.innerHTML = "c'est moins!";
+      message8.innerHTML = "C'est moins!";
       compteurTentative--;
       affichageTentative.innerHTML = `Il vous reste ${compteurTentative} tentatives...`;
     }
     if (prixPropose < vraiPrixObjet) {
-      message8.innerHTML = "c'est plus!";
+      message8.innerHTML = "C'est plus!";
       compteurTentative--;
       affichageTentative.innerHTML = `Il vous reste ${compteurTentative} tentatives...`;
     }

@@ -1,22 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Exercise 3</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="stytles/custom.css">
-    <link rel="shortcut icon" href="#">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="stytles/custom.css" />
+    <link rel="shortcut icon" href="#" />
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-xl px-5">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navmenu"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -46,52 +41,53 @@
           <li class="nav-item">
             <a class="nav-link" href="Exercise-8.html">8</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercise-9.html">9</a>
+          </li>
         </ul>
       </div>
     </nav>
-      
-<!-- Showcase -->
-<main class="container-fluid">
-     <div class="row p-5 d-flex">
-  <div class="exo col-lg">
-      <h3>Exercise 3</h3>
-    <P >Écrire un programme en JavaScript qui va demander à un utilisateur une heure , puis les minutes et enfin les secondes.:</P>
-    <p>Votre programme affichera l'heure qu'il sera à la seconde suivante.</p>
-    <p>Nous partons du principe que l'heure saisie par l'utilisateur est valide !</p>
-    <p>Exemple :</p>
-    <p>Heure saisie : 17h30min22sec.</p>
-    <p>Le programme affichera : 17h30min23sec.</p>
 
-  </div>
+    <!-- Showcase -->
+    <main class="container-fluid">
+      <div class="row p-5 d-flex">
+        <div class="exo col-lg">
+          <h3>Exercise 3</h3>
+          <p>Écrire un programme en JavaScript qui va demander à un utilisateur une heure , puis les minutes et enfin les secondes.:</p>
+          <p>Votre programme affichera l'heure qu'il sera à la seconde suivante.</p>
+          <p>Nous partons du principe que l'heure saisie par l'utilisateur est valide !</p>
+          <p>Exemple :</p>
+          <p>Heure saisie : 17h30min22sec.</p>
+          <p>Le programme affichera : 17h30min23sec.</p>
+        </div>
 
-  <div class="col-lg">
-<form onsubmit="return false">
-  <label for="heure-saisie"  class="mb-1 control-label">Entrez une heure:</label>
-  <input type="number" min="0" max="23" class="form-control" id="heure-saisie" aria-describedby="heure-saisie" required>
-  <br>
-  <label for="minute-saisie"  class="mb-1 control-label">Entrez les minutes:</label>
-  <input type="number" min="0" max="59" class="form-control" id="minute-saisie" aria-describedby="minute-saisie" required>
-  <br>
-  <label for="seconde-saisie"  class="mb-1 control-label">Entrez les secondes:</label>
-  <input type="number" min="0" max="59" class="form-control" id="seconde-saisie" aria-describedby="seconde-saisie" required>
-  <br>
+        <div class="col-lg">
+          <form onsubmit="return false">
+            <label for="heure-saisie" class="mb-1 control-label">Entrez une heure:</label>
+            <input type="number" min="0" max="23" class="form-control" id="heure-saisie" aria-describedby="heure-saisie" required />
+            <br />
+            <label for="minute-saisie" class="mb-1 control-label">Entrez les minutes:</label>
+            <input type="number" min="0" max="59" class="form-control" id="minute-saisie" aria-describedby="minute-saisie" required />
+            <br />
+            <label for="seconde-saisie" class="mb-1 control-label">Entrez les secondes:</label>
+            <input type="number" min="0" max="59" class="form-control" id="seconde-saisie" aria-describedby="seconde-saisie" required />
+            <br />
 
-  <div class="d-flex justify-content-center">
-  <button type="submit" class="btn btn-primary pink mb-3" id="btnHeure">Afficher</button>
-  </div>
-<br>
-<p>Dans une seconde, il sera...</p>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary pink mb-3" id="btnHeure">Afficher</button>
+            </div>
+            <br />
+            <p>Dans une seconde, il sera...</p>
 
-  <div class="mt-3" id="affichageHeure"></div>
-
-</form>
-</div>
-  </div>
-</main>
+            <div class="mt-3" id="affichageHeure"></div>
+          </form>
+        </div>
+      </div>
+    </main>
 
     <script src="js/main.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <script src="https://kit.fontawesome.com/3e0721135b.js" crossorigin="anonymous"></script>
   </body>
